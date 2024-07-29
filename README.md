@@ -9,36 +9,47 @@ Lors de la validation du formulaire en appuyant sur le Bouton Envoyer, si il y a
 ### Pour le Nom :
 
 -Si il n'y a rien de remplis dans l'Input
+
 -Si le Nom ne fait qu'1 charactère de long
+
 -Si le Nom est supérieur à 50 charactère
 
 ### Pour le Prénom :
 
 -Si il n'y a rien de remplis dans l'Input
+
 -Si le Nom ne fait qu'1 charactère de long
+
 -Si le Nom est supérieur à 70 charactère
 
 ### Pour l'Âge
 
 -Si il n'y a rien de remplis dans l'Input
+
 -Si l'âge est inférieur à 18ans
 
 ### Pour l'adresse mail
 
 -Si il n'y a rien de remplis dans l'Input
+
 -Si il ne respect pas la structure mail (truc@truc.truc)
 
 ### Pour le mot de passe
 
 -Si il n'y a rien de remplis dans l'Input
+
 -Si l'Input est inférieur à 8 charactères
+
 -Si l'Input ne contient pas de lettre en Majuscule
+
 -Si l'Input ne contient pas de lettre en minuscule
+
 -Si l'Input ne contient pas de charactère spécial
 
 ### Pour la vérification du mot de passe
 
 -Si il n'y a rien de remplis dans l'Input
+
 -Si l'Input correspond au mot de passe
 
 ## Utilisation de React
