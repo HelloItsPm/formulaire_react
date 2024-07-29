@@ -18,9 +18,9 @@ Lors de la validation du formulaire en appuyant sur le Bouton Envoyer, si il y a
 
 -Si il n'y a rien de remplis dans l'Input
 
--Si le Nom ne fait qu'1 charactère de long
+-Si le Préom ne fait qu'1 charactère de long
 
--Si le Nom est supérieur à 70 charactère
+-Si le Préom est supérieur à 70 charactère
 
 ### Pour l'Âge
 
