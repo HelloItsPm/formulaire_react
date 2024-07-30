@@ -1,19 +1,26 @@
 // Importation des modules nécessaires de React et react-hook-form, ainsi que des styles.
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import {addUser} from '../../userSlice';
 import s from './style.module.css';
 
 // Déclaration du composant fonctionnel SignUpForm.
 const SignUpForm = () => {
     // Utilisation de useForm pour gérer le formulaire, récupérant les fonctions et objets nécessaires.
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    
-    // Utilisation de la fonction watch pour surveiller la valeur du champ 'password'.
-    const password = watch('password', '');
+    // `register` est utilisé pour enregistrer les champs du formulaire avec leurs validations.
+    // `handleSubmit` est une fonction qui gère la soumission du formulaire.
+    // `watch` est utilisé pour surveiller les valeurs des champs en temps réel.
+    // `formState: { errors }` contient les erreurs de validation pour chaque champ.
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+    const dispatch = useDispatch(); // Initialisation du dispatch
+    const password = watch('password', ''); // Utilisation de la fonction watch pour surveiller la valeur du champ 'password'.
 
     // Fonction appelée lors de la soumission du formulaire, qui affiche les données du formulaire dans la console.
     const onSubmit = (data) => {
-        console.log(data);
+        console.log(data); // Affichage des données dans la console pour vérification
+        dispatch(addUser(data)); // Envoi des données au store Redux
+        reset(); // Réinitialiser le formulaire après soumission
     };
 
     // Retourne le JSX représentant le formulaire d'inscription.
